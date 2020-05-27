@@ -1,0 +1,10 @@
+
+file(GLOB IDWTLC_EXECUTABLE_LIST LIST_DIRECTORIES true CONFIGURE_DEPENDS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *)
+
+foreach (IDWTLC_EXE IN LISTS IDWTLC_EXECUTABLE_LIST)
+    if (IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${IDWTLC_EXE})
+        message("Found executable: ${IDWTLC_EXE}")
+        add_subdirectory(${IDWTLC_EXE})
+    endif ()
+endforeach ()
+
