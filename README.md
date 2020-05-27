@@ -35,4 +35,6 @@ idontwanttolearncmake/
 ### External dependencies configuration
 Every executable and library can have external dependencies added. They will be downloaded by Hunter and automatically linked. Every line should contain library name and then optionally list of components (it will be transformed for target_link_library as LIBRARY_NAME::COMPONENT_NAME for every component)
 
-### Example configuration
+### Example source files
+
+Project includes example library and example executable that link to boost::regex and prints something to standard output. Those files should be edited or replaced with actual source files.  
