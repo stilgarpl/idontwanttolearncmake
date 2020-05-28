@@ -14,7 +14,7 @@ enable_testing()
 
 
 #speed up compilation
-option(CMAKE_UNITY_BUILD "Enable unity builds" ON)
+option(CMAKE_UNITY_BUILD "Enable unity builds" OFF)
 find_program(CCACHE_PROGRAM ccache)
 if (CCACHE_PROGRAM)
     set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}")
@@ -27,7 +27,7 @@ include(GNUInstallDirs)
 set(IDWTLC_DESTINATION_LIB "${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME}")
 set(IDWTLC_DESTINATION_INCLUDE "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}")
 set(IDWTLC_CMAKE_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
-set(IDWTLC_LIBRARIES )
+set(IDWTLC_LIBRARIES "")
 add_subdirectory(libraries)
 add_subdirectory(executables)
 
